@@ -66,7 +66,7 @@ After an initial delay of 5sec, open a bunch of tabs with a delay of 2sec in bet
 
 ## My solution
 
-In my analysis, I decided that, for each circle/phase of openings and closings, I had to schedule 3 + (2 * number_of_tabs) events/actions. One after the other with a specified delay in between each event. I think that, if I could use something like a pause(), things would be simpler. With the restriction of having to use setTimeout() or/and setInterval(), I came up with a solution that uses setTimeout to set timers, which when they fire, they use setTimeout to schedule the next event/action.
+In my analysis, I decided that, for each circle/phase of openings and closings, I had to schedule 3 + (2 * number_of_tabs) events/actions. One after the other with a specified delay in between each event. I think that, if I could use something like a pause(), things would be simpler. With the restriction of having to use setTimeout() or/and setInterval(), I came up with a solution that uses setTimeout to set timers, which when they fire, they invoke the function that was scheduled and right after that, they set a new timer, and this goes on and on.
 
 In particular this is the series of events we have to schedule/delay for just one circle/phase:
 > Start(Openings(Closing phase(Closings(Start over()))))

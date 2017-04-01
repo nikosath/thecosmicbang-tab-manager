@@ -8,7 +8,7 @@ TabManager relies on another class, **FuncScheduler**, which is a... function sc
 
 ## Usage
 
-If you want to see the demo in action, please visit the [github project page](http://www.nikosath.space/thecosmicbang-javascript-and-jquery/ch55-javascript-in-web-browsers/index.html).
+If you want to see the demo in action, please visit the [github project page](http://www.nikosath.space/tab-manager/index.html).
 
 #### Class TabManager example
 ```javascript

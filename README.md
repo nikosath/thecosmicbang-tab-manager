@@ -48,8 +48,8 @@ scheduler.addFunc(function f2 () {
 }, delay2);
 
 // If we need 'this' inside f3 or f4 to refer to something other than the global
-//  object, we have to pass it to addFunc. We can also pass a single argument
-//  for f3/f4
+// object, we have to pass it to addFunc. If we want to pass a argument to f4 
+// at the time of the invocation, we can do so.
 
 scheduler.addFunc(function f3 () {
 // do stuff

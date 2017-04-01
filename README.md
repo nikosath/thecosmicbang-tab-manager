@@ -48,16 +48,18 @@ scheduler.addFunc(function f2 () {
 }, delay2);
 
 // If we need 'this' inside f3 or f4 to refer to something other than the global
-// object, we have to pass it to addFunc. If we want to pass a argument to f4 
-// at the time of the invocation, we can do so.
-
+// object, we have to pass 'that' other to addFunc.
+var that = this;
 scheduler.addFunc(function f3 () {
 // do stuff
-}, 1000, this);
+}, 1000, that);
 
+// If we want to pass a argument to f4 at the time of the invocation, we can do
+// so.
+var arg = 'Whatever this function expects';
 scheduler.addFunc(function f4 () {
 // do even more stuff
-}, 1000, this, arg);
+}, 1000, that, arg);
 ```
 
 ## The problem that led to all of this

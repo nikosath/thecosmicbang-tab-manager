@@ -60,11 +60,11 @@ var ex1 = (function () {
     scheduler.addFunc(closeTabs, CLOSING_PHASE_DELAY);
   }
 
+  // Our function scheduler.
+  var scheduler = new FuncScheduler();
+  // It will hold and help us manage, all the tabs we open.
+  var tabs = new TabManager(scheduler);
   function main() {
-    // Our function scheduler.
-    var scheduler = new FuncScheduler();
-    // It will hold and help us manage, all the tabs we open.
-    var tabs = new TabManager(scheduler);
     // We begin by scheduling a new phase of openings and closings.
     scheduler.addFunc(openTabsCloseTabs, INITIAL_DELAY);
   }

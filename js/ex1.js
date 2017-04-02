@@ -29,8 +29,11 @@ var ex1 = (function () {
    */
   function selectEvenOddTabs() {
     var evenTabs = tabs.filter(function (tab, idx) {
+      // TabManager's instance is 0 index based. So, we actually need to select
+      // the odd indices.
       return idx % 2 !== 0;
     });
+    // And here we need to select the even indices.
     var oddTabs = tabs.filter(function (tab, idx) {
       return idx % 2 === 0;
     });

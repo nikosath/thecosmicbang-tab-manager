@@ -21,8 +21,9 @@ var tabs = new TabManager();
 
 tabs.openMany(URLS, OPENING_DELAY);
 
-// Select the even positioned tabs.
-// evenTabs is a Array of Window objects
+// Select the even positioned tabs. TabManager's instance is 0 index based.
+// So, we actually need to select the odd indices.
+// (evenTabs is a Array of Window objects)
 var evenTabs = tabs.filter(function (tab, idx) {
   return idx % 2 !== 0;
 });

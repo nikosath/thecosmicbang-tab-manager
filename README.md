@@ -47,7 +47,7 @@ tabs.closeMany(evenTabs, CLOSING_DELAY);
 #### Class FuncScheduler example
 ```javascript
 // In the following example f1, f2, f3, f4 get invoked after 2sec, 7sec, 8sec,
-// 9sec respectively. Because, the point in time they will be called depends on
+// 9sec respectively. The point in time they will be called depends on
 // their position in the queue and the delay attached to them and to the
 // functions already in the queue before them.
 

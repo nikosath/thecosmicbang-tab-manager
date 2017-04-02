@@ -36,6 +36,7 @@ tabs.openMany(URLS, OPENING_DELAY);
 // So, we actually need to select the odd indices.
 // (evenTabs is a Array of Window objects)
 var evenTabs = tabs.filter(function (tab, idx) {
+  // idx is a 0 based index
   return idx % 2 !== 0;
 });
 

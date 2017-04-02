@@ -49,6 +49,7 @@ TabManager.prototype = {
    */
   filter: function (condition) {
     var filteredTabs = [];
+    // idx is a 0 based index
     this.openTabs.forEach(function (tab, idx) {
       if (condition(tab, idx)) {
         filteredTabs.push(tab);

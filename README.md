@@ -91,13 +91,30 @@ phase/circle of openings/closings should begin. Use `setTimeout()` or/and
 
 ## My solution
 
-In my analysis, I decided that, for each circle/phase of openings and closings, I had to schedule 3 + (2 * number_of_tabs) events/actions. One after the other with a specified delay in between each event. I think that, if I could use something like a `pause()`, things would be simpler. With the restriction of having to use `setTimeout()` or/and `setInterval()`, I came up with a solution that uses `setTimeout()` to set the first timer, which when it fires, it invokes the first event/action/function that was scheduled, and right after that, it sets the next timer. And this goes on and on, until all functions have been scheduled.
+In my analysis, I decided that, for each circle/phase of openings and closings,
+I had to schedule 3 + (2 * number_of_tabs) events/actions. One after the other
+with a specified delay in between each event. I think that, if I could use
+something like a `pause()`, things would be simpler. With the restriction of
+having to use `setTimeout()` or/and `setInterval()`, I came up with a solution
+that uses `setTimeout()` to set the first timer, which when it fires, it invokes
+the first event/action/function that was scheduled, and right after that, it
+sets the next timer. And this goes on and on, until all functions have been
+scheduled.
 
-In particular this is the series of events we have to schedule/delay for just one circle/phase:
+In particular this is the series of events we have to schedule/delay for just
+one circle/phase:
 > Start(Openings(Closing phase(Closings(Start over()))))
 
-For my implementation, I created the two aforementioned classes. Firstly, `TabManager`, that holds all our tabs together as one group, and has methods for opening/closing those tabs with a specified delay in between each action. Secondly, `FuncScheduler`, which `TabManager` relies on, is a quite generic function scheduler, in the sense that it doesn't know anything about tabs, and it can schedule any action whatsoever, as long as, it's in the form a function.
+For my implementation, I created the two aforementioned classes. Firstly,
+`TabManager`, that holds all our tabs together as one group, and has methods for
+opening/closing those tabs with a specified delay in between each action.
+Secondly, `FuncScheduler`, which `TabManager` relies on, is a quite generic
+function scheduler, in the sense that it doesn't know anything about tabs, and
+it can schedule any action whatsoever, as long as, it's in the form a function.
 
-The reasoning for having two separate classes, was that I attemped to minimize the perceived complexity of my solution, and increase the aspects of code reusability and maintainability. Thus, I opted to decouple as much as I could, the process of tab management from the process of scheduling actions.
+The reasoning for having two separate classes, was that I attemped to minimize
+the perceived complexity of my solution, and increase the aspects of code
+reusability and maintainability. Thus, I opted to decouple as much as I could,
+the process of tab management from the process of scheduling actions.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

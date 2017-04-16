@@ -16,7 +16,7 @@ be at the scheduled state/slot, at any given time.
 ## Usage
 
 If you want to see the demo in action, please visit the
-[github project page](http://www.nikosath.space/tab-manager/index.html).
+[github project page](http://www.nikosath.space/thecosmicbang-tab-manager/index.html).
 
 #### Class TabManager example
 ```javascript

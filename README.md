@@ -113,7 +113,7 @@ For my implementation, I created the two aforementioned classes. Firstly,
 opening/closing those tabs with a specified delay in between each action.
 Secondly, `FuncScheduler`, which `TabManager` relies on, is a quite generic
 function scheduler, in the sense that it doesn't know anything about tabs, and
-it can schedule any action whatsoever, as long as, it's in the form a function.
+it can schedule any action whatsoever, as long as, it's in the form of a function.
 
 The reasoning for having two separate classes, was that I attemped to minimize
 the perceived complexity of my solution, and increase the aspects of code

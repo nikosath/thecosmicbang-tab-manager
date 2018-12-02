@@ -16,7 +16,7 @@ be at the scheduled state/slot, at any given time.
 ## Usage
 
 If you want to see the demo in action, please visit the
-[github project page](http://www.nikosath.space/thecosmicbang-tab-manager/index.html). 
+[github project page](http://www.nikosath.net/thecosmicbang-tab-manager/index.html). 
 
 Note: If you can't see anything happening after pressing the Start button, you probably 
 have to disable, temporarily, any pop-up blocking settings your browser may have.
